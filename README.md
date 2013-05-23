@@ -1,4 +1,4 @@
-# Development Set
+# Development Setup
 
 ## Install Ruby
 
@@ -14,4 +14,4 @@ Use/Install RVM
 
   ``bundle exec rackup``
 
-Got to [http://localhost:9292](http://localhost:9292)
+Go to [http://localhost:9292](http://localhost:9292)
