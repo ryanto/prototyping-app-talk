@@ -10,7 +10,7 @@ Use/Install RVM
 
   ``bundle install``
 
-## Start Rake
+## Start Rake Pipeline
 
   ``bundle exec rackup``
 
