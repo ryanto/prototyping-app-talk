@@ -1,0 +1,74 @@
+require "rake-pipeline-web-filters"
+require "json"
+
+output "compiled"
+
+input "app" do
+  match "*.html" do
+    copy
+  end
+
+  match "**/*.js" do
+    minispade :rewrite_requires => true, :string => true, :module_id_generator => Proc.new { |input|
+      input.path.dup.\
+        sub(/\.js$/, '')
+    }
+  end
+
+  match "templates/**/*.handlebars" do
+    handlebars :key_name_proc => Proc.new { |input|
+      input.path.\
+        gsub(/\.handlebars$/, '').\
+        gsub(/^templates\//, '')
+    }
+  end
+
+  match "**/*.js" do
+    concat "app.js"
+  end
+
+  match "**/*.scss" do
+    filter Rake::Pipeline::Web::Filters::SassFilter
+    concat "app.css"
+  end
+end
+
+input "libs" do
+  match "*.{png,jpg}" do
+    copy
+  end
+
+  match "font/*" do
+    copy
+  end
+end
+
+input "libs/js" do
+  match "*.js" do
+    filter(
+      Rake::Pipeline::OrderingConcatFilter,
+      [
+        "jquery-1.9.1.js",
+        "handlebars.js",
+        "ember.js",
+        "codemirror.js"
+      ],
+      "libs.js"
+    )
+  end
+end
+
+input "libs/css" do
+  match "**/*.css" do
+    filter(
+      Rake::Pipeline::OrderingConcatFilter,
+      [
+        "bootstrap.css"
+      ],
+      "libs.css"
+    )
+  end
+end
+
+
+

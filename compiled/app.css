@@ -1,0 +1,161 @@
+/* line 1, /Users/ryan/projects/Ember-Play/app/front-end/app/scss/nav.scss */
+.navbar {
+  color: white;
+  background-color: #222;
+  border-bottom: 1px solid #000;
+  padding: 0.5em 1em;
+  margin-bottom: 0;
+  font-weight: bold;
+}
+/* line 1, /Users/ryan/projects/Ember-Play/app/front-end/app/scss/workspace.scss */
+.workspace {
+  position: relative;
+}
+/* line 4, /Users/ryan/projects/Ember-Play/app/front-end/app/scss/workspace.scss */
+.workspace .input-output-space {
+  float: left;
+  width: 73%;
+  height: 100%;
+}
+/* line 1, /Users/ryan/projects/Ember-Play/app/front-end/app/scss/workspace/input-sidebar.scss */
+.input-sidebar {
+  width: 20%;
+  float: left;
+  color: #f2f2f2;
+  background-color: #222;
+  height: 100%;
+  overflow-y: scroll;
+}
+/* line 9, /Users/ryan/projects/Ember-Play/app/front-end/app/scss/workspace/input-sidebar.scss */
+.input-sidebar ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+/* line 14, /Users/ryan/projects/Ember-Play/app/front-end/app/scss/workspace/input-sidebar.scss */
+.input-sidebar ul li {
+  border-top: 1px solid #444;
+  border-bottom: 1px solid #000;
+  text-shadow: none;
+}
+/* line 21, /Users/ryan/projects/Ember-Play/app/front-end/app/scss/workspace/input-sidebar.scss */
+.input-sidebar a {
+  display: block;
+  color: white;
+  text-decoration: none;
+}
+/* line 26, /Users/ryan/projects/Ember-Play/app/front-end/app/scss/workspace/input-sidebar.scss */
+.input-sidebar a:hover {
+  color: #f23818;
+}
+/* line 31, /Users/ryan/projects/Ember-Play/app/front-end/app/scss/workspace/input-sidebar.scss */
+.input-sidebar .group-name {
+  font-size: 1.1em;
+  text-shadow: #666 0.1em 0.1em 0.1em;
+  padding: 0.5em 1em;
+}
+/* line 36, /Users/ryan/projects/Ember-Play/app/front-end/app/scss/workspace/input-sidebar.scss */
+.input-sidebar .group-name .add:hover {
+  background-color: #f23818;
+}
+/* line 41, /Users/ryan/projects/Ember-Play/app/front-end/app/scss/workspace/input-sidebar.scss */
+.input-sidebar ul.inputs, .input-sidebar ul.adding {
+  border-top: 1px solid #000;
+  padding: 0.5em 1em 0.5em 1em;
+  background-color: #333;
+}
+/* line 46, /Users/ryan/projects/Ember-Play/app/front-end/app/scss/workspace/input-sidebar.scss */
+.input-sidebar ul.inputs li, .input-sidebar ul.adding li {
+  border: none;
+}
+/* line 49, /Users/ryan/projects/Ember-Play/app/front-end/app/scss/workspace/input-sidebar.scss */
+.input-sidebar ul.inputs li .input-options a, .input-sidebar ul.adding li .input-options a {
+  display: inline;
+}
+/* line 55, /Users/ryan/projects/Ember-Play/app/front-end/app/scss/workspace/input-sidebar.scss */
+.input-sidebar input {
+  font-size: 0.8em;
+  width: 70px;
+}
+/* line 1, /Users/ryan/projects/Ember-Play/app/front-end/app/scss/workspace/inputs.scss */
+.input-output-space .inputs {
+  height: 100%;
+  width: 100%;
+  float: left;
+  position: relative;
+  background-color: #f2f2f2;
+}
+/* line 8, /Users/ryan/projects/Ember-Play/app/front-end/app/scss/workspace/inputs.scss */
+.input-output-space .inputs .input {
+  position: absolute;
+  top: 10;
+  left: 10;
+  border: 1px solid #000;
+}
+/* line 14, /Users/ryan/projects/Ember-Play/app/front-end/app/scss/workspace/inputs.scss */
+.input-output-space .inputs .input .name {
+  padding: 4px;
+  background-color: #444;
+  border-bottom: 1px solid #000;
+  color: white;
+}
+/* line 19, /Users/ryan/projects/Ember-Play/app/front-end/app/scss/workspace/inputs.scss */
+.input-output-space .inputs .input .name a, .input-output-space .inputs .input .name a:hover {
+  color: white;
+  text-decoration: none;
+}
+/* line 25, /Users/ryan/projects/Ember-Play/app/front-end/app/scss/workspace/inputs.scss */
+.input-output-space .inputs .input .ui-icon {
+  height: 12px;
+  width: 12px;
+}
+/* line 31, /Users/ryan/projects/Ember-Play/app/front-end/app/scss/workspace/inputs.scss */
+.input-output-space .inputs .input .CodeMirror {
+  font-size: 12px;
+  font-family: 'Monaco', 'DejaVu Sans Mono', 'Inconsolata';
+  width: 452px;
+}
+/* line 1, /Users/ryan/projects/Ember-Play/app/front-end/app/scss/workspace/output.scss */
+.output {
+  height: 100%;
+  float: left;
+  display: none;
+  position: relative;
+  background-color: white;
+  z-index: 999999;
+}
+/* line 1, /Users/ryan/projects/Ember-Play/app/front-end/app/scss/workspace/settings-sidebar.scss */
+.settings-sidebar {
+  height: 100%;
+  width: 7%;
+  float: right;
+  font-size: 0.80em;
+  background-color: #222;
+  text-align: center;
+  position: relative;
+}
+/* line 12, /Users/ryan/projects/Ember-Play/app/front-end/app/scss/workspace/settings-sidebar.scss */
+.settings-sidebar a {
+  color: white;
+  display: block;
+  text-decoration: none;
+}
+/* line 18, /Users/ryan/projects/Ember-Play/app/front-end/app/scss/workspace/settings-sidebar.scss */
+.settings-sidebar ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+/* line 23, /Users/ryan/projects/Ember-Play/app/front-end/app/scss/workspace/settings-sidebar.scss */
+.settings-sidebar ul li {
+  padding: 0.5em 1em;
+  border-top: 1px solid #444;
+  border-bottom: 1px solid #000;
+}
+/* line 30, /Users/ryan/projects/Ember-Play/app/front-end/app/scss/workspace/settings-sidebar.scss */
+.settings-sidebar .expand {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  margin: 0 auto;
+}

@@ -1,0 +1,17 @@
+<h1>{{name}}</h1>
+
+<p>
+  Return to {{#linkTo project project}}{{project.name}}{{/linkTo}}
+</p>
+
+<p>
+  This task has {{#if isDone}}been{{else}}not been{{/if}}
+  completed.
+</p>
+
+{{#if isDone}}
+  <a class="btn" {{action toggle task}}>Complete</a>
+{{else}}
+  <a class="btn" {{action toggle task}}>Not Complete</a>
+{{/if}}
+

@@ -1,0 +1,36 @@
+<h1>All Projects</h1>
+
+<p>{{#linkTo projects.new}}Add{{/linkTo}} a new project</p>
+
+<p>You have {{length}} projects</p>
+
+<table class="table">
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Tasks</th>
+      <th>Edit</th>
+      <th>Delete</th>
+    </tr>
+  </thead>
+  <tbody>
+    {{#each project in controller itemController=Project}}
+      <tr>
+        <td>
+          {{#linkTo project project}}
+            {{project.name}}
+          {{/linkTo}}
+        </td>
+        <td>
+          {{project.tasks.length}}
+        </td>
+        <td>
+          {{#linkTo project.edit project}}Edit{{/linkTo}}
+        </td>
+        <td>
+          <a href="#" {{action deleteRecord}}>Delete</a>
+        </td>
+      </tr>
+    {{/each}}
+  </tbody>
+</table>

@@ -1,0 +1,28 @@
+<h1>{{name}}</h1>
+
+<div class="row">
+  <div class="span6">
+    <p>
+      This project has {{tasks.length}} tasks.
+    </p>
+
+    {{#each task in tasks itemController=Task}}
+      <div class="row">
+        <div class="span4">
+          {{#linkTo task task}}{{task.name}}{{/linkTo}}
+        </div>
+
+        <div class="span2">
+          <span {{action toggle}}
+            {{bindAttr class="task.isDone:label-success:label-important :label"}}>
+              {{task.status}}
+          </span>
+        </div>
+      </div>
+    {{/each}}
+
+  </div>
+  <div class="span6">
+    {{render "tasks/new"}}
+  </div>
+</div>
